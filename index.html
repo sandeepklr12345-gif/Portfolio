@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sandeep K — Software Engineer / AI</title>
+<meta name="description" content="Sandeep K — Software Developer, AI Engineer, Full Stack Developer. Portfolio of projects, research and skills." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+<canvas id="net-canvas"></canvas>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#home" class="nav-logo">SK<span class="dot">.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about"><span class="n"></span>About</a></li>
+    <li><a href="#skills"><span class="n"></span>Skills</a></li>
+    <li><a href="#projects"><span class="n"></span>Projects</a></li>
+    <li><a href="#research"><span class="n"></span>Research</a></li>
+    <li><a href="#achievements"><span class="n"></span>Achievements</a></li>
+    <li><a href="#contact"><span class="n"></span>Contact</a></li>
+    <li><a href="Sandeep_K_Resume.pdf" target="_blank" class="nav-resume">Resume</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow mono">Hi, my name is</p>
+      <h1 class="hero-name">Sandeep K<span class="cursor-blink">_</span></h1>
+      <h2 class="hero-role">Software Developer <span class="sep">/</span> AI Engineer <span class="sep">/</span> Full Stack Developer</h2>
+      <p class="hero-desc">I build intelligent software, AI-powered applications, and scalable web
+      experiences — exploring machine learning, computer vision, and modern
+      software engineering along the way.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="Sandeep_K_Resume.pdf" target="_blank" class="btn btn-ghost">Download Resume</a>
+        <a href="#contact" class="btn btn-text">Contact Me →</a>
+      </div>
+    </div>
+
+    <div class="hero-terminal reveal" aria-hidden="true">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          <span class="terminal-title mono">profile.json</span>
+        </div>
+        <pre class="terminal-body mono"><code id="typedCode"></code><span class="type-caret">|</span></pre>
+      </div>
+      <div class="stat-chip chip-1"><strong>8.53</strong><span>CGPA</span></div>
+      <div class="stat-chip chip-2"><strong>1</strong><span>Patent Filed</span></div>
+      <div class="stat-chip chip-3"><strong>1</strong><span>Research Paper</span></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue mono" aria-label="Scroll down">scroll<span></span></a>
+</header>
+
+<main>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2 class="section-title reveal"><span class="idx mono"></span> About Me</h2>
+  <div class="about-grid">
+    <div class="about-photo reveal">
+      <div class="photo-frame">
+        <div class="photo-placeholder mono">SK</div>
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <p>I'm a Computer Science &amp; Engineering student specializing in
+      <strong>Artificial Intelligence</strong> at Dayananda Sagar Academy of
+      Technology &amp; Management, Bengaluru. I'm passionate about AI, machine
+      learning, backend systems, and full stack development — I like taking a
+      problem apart until I understand it, then building something real from
+      the pieces.</p>
+      <p>Lately that has meant exploring scalable software architecture,
+      contributing to a patent-filed diagnostic system, and shipping projects
+      that pair computer vision with practical, everyday use cases.</p>
+      <ul class="about-list">
+        <li>Building scalable, well-structured software architecture</li>
+        <li>Exploring machine learning &amp; computer vision pipelines</li>
+        <li>Always picking up new tools, frameworks and ideas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-cards reveal">
+    <div class="info-card"><span class="mono label">CGPA</span><strong>8.53</strong></div>
+    <div class="info-card"><span class="mono label">Education</span><strong>B.E · CSE (AI)</strong></div>
+    <div class="info-card"><span class="mono label">Patent</span><strong>Filed</strong></div>
+    <div class="info-card"><span class="mono label">Research</span><strong>1 Paper</strong></div>
+    <div class="info-card"><span class="mono label">Location</span><strong>Bengaluru, IN</strong></div>
+    <div class="info-card"><span class="mono label">Grad. Year</span><strong>2027</strong></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h2 class="section-title reveal"><span class="idx mono"></span> Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card reveal">
+      <h3 class="mono">Programming</h3>
+      <div class="tag-row">
+        <span class="tag">Python</span><span class="tag">Java</span>
+        <span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">SQL</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <h3 class="mono">Frontend</h3>
+      <div class="tag-row">
+        <span class="tag">HTML</span><span class="tag">CSS</span>
+        <span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Tailwind CSS</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <h3 class="mono">Backend</h3>
+      <div class="tag-row">
+        <span class="tag">Spring Boot</span><span class="tag">REST APIs</span><span class="tag">Node.js</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <h3 class="mono">Database</h3>
+      <div class="tag-row">
+        <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <h3 class="mono">AI &amp; ML</h3>
+      <div class="tag-row">
+        <span class="tag">Scikit-learn</span><span class="tag">TensorFlow</span>
+        <span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <h3 class="mono">Tools</h3>
+      <div class="tag-row">
+        <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker</span>
+        <span class="tag">VS Code</span><span class="tag">Postman</span><span class="tag">Eclipse</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h2 class="section-title reveal"><span class="idx mono"></span> Featured Projects</h2>
+
+  <div class="project-list">
+
+    <article class="project-card reveal">
+      <div class="project-visual">
+        <span class="project-icon">🧬</span>
+      </div>
+      <div class="project-body">
+        <span class="mono project-status">Patent Filed</span>
+        <h3>Multimodal Muscular Dystrophy Detection System</h3>
+        <p>Contributed to documentation of an EMG signal acquisition workflow and
+        hardware sensor configuration, analyzing a system architecture that
+        combines adaptive electrode arrays with inertial and pressure sensing
+        modules. Explored ML-driven diagnostic pipelines including CNN-based
+        classification, and supported patent drafting and validation documentation.</p>
+        <div class="tag-row">
+          <span class="tag">Machine Learning</span><span class="tag">CNN</span>
+          <span class="tag">Signal Processing</span><span class="tag">Patent</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-visual">
+        <span class="project-icon">🎓</span>
+      </div>
+      <div class="project-body">
+        <span class="mono project-status">Project</span>
+        <h3>Student Management System</h3>
+        <p>Full-stack system for managing student records and academic details,
+        built with a layered Controller → Service → Repository → Entity
+        architecture. Implements CRUD operations, validation, exception
+        handling, and RESTful APIs backed by PostgreSQL.</p>
+        <div class="tag-row">
+          <span class="tag">Java</span><span class="tag">Spring Boot</span>
+          <span class="tag">REST API</span><span class="tag">JPA / Hibernate</span>
+          <span class="tag">PostgreSQL</span><span class="tag">Maven</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-visual">
+        <span class="project-icon">👁️</span>
+      </div>
+      <div class="project-body">
+        <span class="mono project-status">Learning Project</span>
+        <h3>Driver Drowsiness Detection System</h3>
+        <p>Computer-vision system for detecting driver fatigue in real time using
+        facial feature and eye-state analysis. Covers the full workflow —
+        image processing, detection logic, and alert generation — built while
+        learning practical CV and ML fundamentals.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">OpenCV</span>
+          <span class="tag">Computer Vision</span><span class="tag">Machine Learning</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- RESEARCH & PATENT -->
+<section class="section" id="research">
+  <h2 class="section-title reveal"><span class="idx mono"></span> Research &amp; Patent</h2>
+  <div class="research-grid">
+
+    <div class="research-card reveal">
+      <span class="research-icon">📄</span>
+      <span class="mono research-tag">Publication</span>
+      <h3>Conference Research Paper</h3>
+      <p class="research-sub">Advanced Multidisciplinary Innovations in Science &amp; Engineering
+      for Industry 5.0 (AMISE 5.0) — International Conference</p>
+      <p>Authored and presented original research at an international conference
+      focused on multidisciplinary innovation for Industry 5.0.</p>
+    </div>
+
+    <div class="research-card reveal">
+      <span class="research-icon">💡</span>
+      <span class="mono research-tag">Patent Filed</span>
+      <h3>Multimodal Muscular Dystrophy Detection</h3>
+      <p class="research-sub">Co-Inventor</p>
+      <p>A diagnostic system combining EMG signal acquisition, adaptive electrode
+      arrays, and inertial/pressure sensing with ML-driven, CNN-based
+      classification pipelines.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section" id="achievements">
+  <h2 class="section-title reveal"><span class="idx mono"></span> Achievements &amp; Certifications</h2>
+
+  <div class="achieve-grid">
+    <div class="achieve-card reveal"><span class="achieve-icon">💡</span><h4>Patent Filed</h4><p>Co-Inventor, Multimodal Muscular Dystrophy Detection System</p></div>
+    <div class="achieve-card reveal"><span class="achieve-icon">📄</span><h4>Research Publication</h4><p>Presented at AMISE 5.0 International Conference</p></div>
+    <div class="achieve-card reveal"><span class="achieve-icon">🏆</span><h4>Hackathons &amp; Ideathons</h4><p>Participated in hackathons, ideathons &amp; technical innovation challenges</p></div>
+    <div class="achieve-card reveal"><span class="achieve-icon">🎖️</span><h4>NCC Cadet</h4><p>Strong discipline, leadership and teamwork skills</p></div>
+    <div class="achieve-card reveal"><span class="achieve-icon">🤼</span><h4>Kabaddi</h4><p>Represented &amp; competed at the inter-school level</p></div>
+    <div class="achieve-card reveal"><span class="achieve-icon">🌐</span><h4>Cloud Computing Fundamentals</h4><p>IBM SkillsBuild, 2025</p></div>
+  </div>
+
+  <div class="cert-list">
+    <div class="cert-row reveal">
+      <div class="cert-info"><h4>Deep Learning</h4><span class="mono">NPTEL (IIT Ropar) · 10/2025</span></div>
+    </div>
+    <div class="cert-row reveal">
+      <div class="cert-info"><h4>Oracle Cloud Infrastructure Foundations</h4><span class="mono">Coursera / Oracle · 04/2025</span></div>
+    </div>
+    <div class="cert-row reveal">
+      <div class="cert-info"><h4>Cloud Computing Fundamentals</h4><span class="mono">IBM SkillsBuild · 05/2025</span></div>
+    </div>
+    <div class="cert-row reveal">
+      <div class="cert-info"><h4>Oracle SQL Performance Tuning</h4><span class="mono">Coursera / EDUCBA · 11/2025</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section resume-section" id="resume">
+  <h2 class="section-title reveal"><span class="idx mono"></span> Resume</h2>
+  <div class="resume-box reveal">
+    <p>Want the full picture in one document?</p>
+    <div class="hero-actions center">
+      <a href="Sandeep_K_Resume.pdf" download class="btn btn-primary">Download Resume</a>
+      <a href="Sandeep_K_Resume.pdf" target="_blank" class="btn btn-ghost">Preview Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2 class="section-title reveal"><span class="idx mono"></span> Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <p>I'm currently looking for Software Development, AI/ML, and Full Stack
+      internship opportunities. My inbox is open — I'll get back to you.</p>
+      <ul class="contact-list">
+        <li><span class="mono">Email</span><a href="mailto:Sandeepklr12345@gmail.com">Sandeepklr12345@gmail.com</a></li>
+        <li><span class="mono">Phone</span><a href="tel:+916363480155">+91 63634 80155</a></li>
+        <li><span class="mono">Location</span><span>Bengaluru, India</span></li>
+        <li><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/sandeep-k-s0155/" target="_blank">linkedin.com/in/sandeep-k-s0155</a></li>
+      </ul>
+    </div>
+    <form class="contact-form reveal" id="contactForm">
+      <label class="mono" for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+      <label class="mono" for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label class="mono" for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" />
+      <label class="mono" for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary full">Send Message</button>
+      <p class="form-note mono" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+    <a href="#research">Research</a><a href="#contact">Contact</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/in/sandeep-k-s0155/" target="_blank" aria-label="LinkedIn">in</a>
+    <a href="mailto:Sandeepklr12345@gmail.com" aria-label="Email">@</a>
+  </div>
+  <p class="mono footer-copy">Designed &amp; built by Sandeep K · © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
